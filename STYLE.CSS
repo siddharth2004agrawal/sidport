@@ -1,0 +1,215 @@
+body{
+    background-image: url("bgimg.jpeg");
+    margin: 0px;
+    padding: 5px;
+    background-repeat: no-repeat, repeat;
+    background-size: cover, contain;
+    background-position: center, top right;
+}
+.head{
+    text-align: center;
+    /* padding-right: 40px; */
+
+}
+.head a{
+    margin: 10px;
+    color:white;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.home {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+.main h2 {
+    margin-right: 20px;
+    color: white;
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    font-family: sans-serif;
+    animation-name: slide-in;
+    animation-duration: 4s;
+}
+.main p{
+    color: white;
+    font-size: 20px;
+    animation-name: slide-in;
+    animation-duration: 4s;
+}
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* End fully opaque */
+    }
+}
+.imgsec img{
+    height: 500px;
+    width: 400px;
+    border-radius: 80px  20px;
+    border: 2px solid rgba(128, 128, 128, 0.534);
+    background:grey;
+    padding: 5px;
+    margin-left: 30px;
+}
+.short {
+    color:white;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Simulated outline using shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin:20px;
+}
+.short h3{
+    font-family: monospace;
+    font-size: 40px;
+}
+.short p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 1.6;
+    animation-name: slide-down;
+    animation-duration: 5s;
+}
+.short ul{
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.education {
+    width: 100%;
+    border-collapse: collapse; /* Makes sure there are no double borders */
+    margin-bottom: 30px;
+}
+
+.education th, .education td {
+    border: 1px solid black; /* Adds border inside table cells */
+    padding: 10px; /* Adds padding inside cells */
+    text-align: left;
+    font-size: 18px; /* Increases text size */
+}
+
+.education th {
+    background-color:grey; /* Adds a light grey background color to the header */
+}
+@keyframes slide-down {
+    from {
+        transform: translateY(-20%); /* Start from the top */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* End fully opaque */
+    }
+}
+.project {
+    color:white;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Simulated outline using shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin:20px;
+}
+.project h3{
+    font-family: monospace;
+    font-size: 40px;
+}
+.project ul{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact {
+    color:white;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Simulated outline using shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin:20px;
+}
+.social-links a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+.contact h3{
+    font-family: monospace;
+    font-size: 40px;
+}
+.contact p{
+    font-size: 30px;
+    line-height: 1.6;
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .main h2 {
+        margin-right: 0;
+        font-size: 2em;
+    }
+    
+    .imgsec img {
+        height: 300px;
+        width: 300px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .short, .contact {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 15px;
+    }
+    .short h3, .contact h3 {
+        font-size: 1.5em;
+    }
+    .short p {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 480px) {
+    .head a {
+        font-size: 16px;
+    }
+    .home h2 {
+        font-size: 1.5em;
+    }
+    .home img {
+        height: 200px;
+        width: 200px;
+    }
+    .short p {
+        font-size: 1em;
+    }
+}
+@media (max-width: 768px) {
+    .education th, .education td {
+        font-size: 16px; /* Reduces font size for smaller screens */
+        padding: 8px; /* Reduces padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .education th, .education td {
+        font-size: 14px; /* Further reduces font size for very small screens */
+        padding: 5px; /* Further reduces padding for very small screens */
+    }
+}
+@media (max-width: 768px) {
+    .social-links a {
+        font-size: 1.2em; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links a {
+        font-size: 1em; /* Further reduce font size for very small screens */
+        margin: 5px; /* Reduce margin for better spacing */
+    }
